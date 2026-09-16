@@ -317,9 +317,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ============ 連盟スポンサーの帯 ============ */
   .strip{background:var(--paper-3);border-block:1px solid var(--line)}
-  .strip-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 22px;padding:22px 0;text-align:center}
-  .strip-label{font-family:var(--f-body);font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--ink-faint)}
-  .strip-text{font-size:.88rem;letter-spacing:.06em;color:var(--ink-soft);line-height:1.9}
+  .strip-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(14px,2vw,20px);padding:clamp(44px,6vw,72px) 0}
+  .strip-badge{width:clamp(100px,12vw,132px);height:auto;flex:none;filter:drop-shadow(0 6px 14px rgba(43,26,84,.16))}
+  .strip-txt{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .strip-label{font-family:var(--f-body);font-size:11.5px;font-weight:600;letter-spacing:.18em;color:var(--ink-faint)}
+  .strip-text{font-size:clamp(.96rem,1.8vw,1.1rem);letter-spacing:.06em;color:var(--ink);line-height:2}
   .strip-text a{color:var(--matcha-deep);font-weight:600;text-decoration:none;border-bottom:1px solid var(--matcha-deep);padding-bottom:1px;transition:opacity .25s}
   .strip-text a:hover{opacity:.65}
 
@@ -335,10 +337,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .ing-photo{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:2px;display:block}
   .why-photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:2px;margin-top:6px}
-  .strip-in{justify-content:flex-start;text-align:left;gap:18px}
-  .strip-badge{width:60px;height:60px;flex:none}
-  .strip-txt{display:flex;flex-direction:column;gap:4px}
-  @media (max-width:640px){.strip-in{flex-direction:column;align-items:center;text-align:center}}
 
   /* ============ 成分バッジ（写真の上） ============ */
   .nutri-fig{display:block;width:min(520px,100%);height:auto;margin:clamp(30px,4vw,48px) auto clamp(4px,1vw,10px)}
